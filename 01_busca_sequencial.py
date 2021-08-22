@@ -128,7 +128,6 @@ hora_fim = time()
 print(f"Tempo gasto procurando LUNISVALDO: {(hora_fim - hora_ini) * 1000}ms")
 
 hora_ini = time()
-print(f"Posição de AARAO: {busca_binaria(nomes, 'AARAO')}")
+print(f"Posição de AARAO: {busca_sequencial(nomes, 'AARAO')}")
 hora_fim = time()
 print(f"Tempo gasto procurando AARAO: {(hora_fim - hora_ini) * 1000}ms")
-        
