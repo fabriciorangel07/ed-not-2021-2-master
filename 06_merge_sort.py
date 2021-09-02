@@ -7,18 +7,16 @@
 
 def merge_sort(lista):
     """
-
-        Função que implementa o algoritimo merge sort usando o metodo Recursivo.
+        Função que implementa o algoritmo merge sort usando o
+        método RECURSIVO
     """
 
-    #print (f"Lista recebida: {lista}")
+    # print(f'Lista recebida: {lista}')
 
-    #só continua a lista se tiver mais de um elemento.
+    # Só continua se a lista tiver mais de um elemento
     if len(lista) <= 1:
         return lista
 
-    #chamamos recursivamente a função para continuar
-    #repartindo a metade da lista
     meio = len(lista) // 2
 
     # Gera cópia da primeira metade da lista
@@ -64,24 +62,22 @@ def merge_sort(lista):
     # Retornamos a lista final ordenada, composta da ordenada + sobra
     return ordenada + sobra     # "Soma" de duas listas
 
- 
-##########################################################################################
- 
+#################################################################
+
 nums = [88, 44, 33, 0, 99, 55, 77, 22, 11, 66]
 
 nums_ord = merge_sort(nums)
 
-print (nums_ord)
+print(nums_ord)
 
-
-##########################################################################################
+#################################################################
 
 from data.nomes_desord import nomes
 from time import time
 import tracemalloc
 
 ini = time()
-tracemalloc.start()     # Inicia a medicao de consumo de memoria
+tracemalloc.start()     # Inicia a medição de consumo de memória
 
 nomes_ord = merge_sort(nomes)
 
@@ -89,9 +85,8 @@ mem_atual, mem_pico = tracemalloc.get_traced_memory()
 
 fim = time()
 
-print (nomes_ord)
-print (f"Tempo:  {fim - ini}")
-print (f"Pico de memoria: {mem_pico / 1024 / 1024}MB ")
+print(nomes_ord)
+print(f"Tempo: {fim - ini}")
+print(f"Pico de memória: {mem_pico / 1024 / 1024}MB")
 
-
-tracemalloc.end()       # finaliza a medicao de consumo de memoria
+tracemalloc.stop()      # Finaliza a medição do consumo de memória
