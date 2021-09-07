@@ -85,8 +85,8 @@ mem_atual, mem_pico = tracemalloc.get_traced_memory()
 
 fim = time()
 
-print(nomes_ord)
+print(nomes)
 print(f"Tempo: {fim - ini}")
-print(f"Pico de memória: {mem_pico / 1024 / 1024}MB")
+print(f"Passadas: {passadas}, comparações: {comps}, trocas: {trocas}",""Pico de memória: {mem_pico / 1024 / 1024}MB")
 
 tracemalloc.stop()      # Finaliza a medição do consumo de memória
