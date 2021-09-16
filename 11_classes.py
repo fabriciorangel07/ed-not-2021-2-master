@@ -90,7 +90,7 @@ class FormaGeometrica():
             return self.base * self.altura
         elif self.tipo == "T":  # Triangulo
             return self.base * self.altura / 2 
-        else # Elipse, tipo "E"
+        else: #Elipse tipo "E"
             return (self.base /2) * (self.altura /2 ) * pi
 
 #################################################################

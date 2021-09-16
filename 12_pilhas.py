@@ -1,8 +1,10 @@
 # Palíndromo: é um texto que, quando lido de trás pra frente, mantem o mesmo contéudo (Desprezando acentos e espacamento)
 
-palindromo = "SOCORRAM-ME, SUBI NO ONIBUS EM MARROCOS"
+# texto = "SOCORRAM-ME, SUBI NO ONIBUS EM MARROCOS"
 
-lista = []
+texto = "BATATINHA QUANDO NASCE ESPALHA RAMA PELO CHÃO"
+
+pilha = []
 
 # Percurso do palindromo em ordem inversa, colocando cada letra na lista de trás pra frente
 
@@ -11,13 +13,29 @@ lista = []
 
 #print(lista)
 
-for letra in (palindromo):
-    lista.append (letra)
+for letra in (texto):
+    pilha.append (letra)    # append () sempre acrescenta por ULTIMO.
+
+#pilha.insert (10, 'y')
+#pilha.insert (19, 'g')
+#pilha.insert (6, 'ç')
 
 inverso = ""
 
+# Remoção de elementos em posições que não são a final
+# del pilha [11] # Remove a posição desejada.
+# del pilha [21]
+# del pilha [8]
+# del pilha [25]
+
 # Retira cada letra da lista, de trás pra frente, e coloca no inverso
-while len(lista) > 0:
-    inverso += lista.pop() #  pop() retira sempre o ULTIMO elemento
+while len(pilha) > 0:
+    inverso += pilha.pop() #  pop() retira sempre o ULTIMO elemento
 
 print(inverso)
+
+# PILHA
+# A pilha  é um tipo abstrado de dado (TAD) que permite a entrada e a saída de dados apenas na sua extremidade final.
+# Como consequencia, ela segue a regre LIFO (Last in, first out - Ultimo a entrar, primeiro a sair).
+# E tem acesso limitado aos seus elementos.
+# Pilha 
